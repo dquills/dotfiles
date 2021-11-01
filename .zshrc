@@ -101,4 +101,4 @@ eval "$(starship init zsh)"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vim="nvim"
-
+bindkey -v # set vim mode
