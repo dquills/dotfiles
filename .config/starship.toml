@@ -74,24 +74,31 @@ modified = "!"
 staged = "+"
 untracked = "?"
 
+[package]
+disabled = false
+format = "[[](bg:208 fg:#464347)$symbol$version[](bg:#464347 fg:208)]($style)"
+symbol = " "
+style = "bg:208 fg:black"
+display_private = false
+
 [python]
 disabled = false
 pyenv_version_name = false
 pyenv_prefix = "pyenv "
 python_binary = "python"
 # scan_for_pyfiles = true
-format = '[[](bg:yellow fg:#464347)via $symbol$pyenv_prefix$version( \($virtualenv\))[](bg:#464347 fg:yellow)]($style)'
+format = '[[](bg:yellow fg:#464347)$symbol$pyenv_prefix$version( \($virtualenv\))[](bg:#464347 fg:yellow)]($style)'
 style = "bg:yellow fg:black"
 symbol = " "
 
 [ruby]
 disabled = false
-format = "[[](bg:red fg:#464347)via $symbol$version[](bg:#464347 fg:red)]($style)"
+format = "[[](bg:red fg:#464347)$symbol$version[](bg:#464347 fg:red)]($style)"
 symbol = " "
 style = "bg:red fg:black"
 
 [rust]
 disabled = false
-format = "[[](bg:red fg:#464347)via $symbol$version[](bg:#464347 fg:red)]($style)"
-symbol = " "
+format = "[[](bg:red fg:#464347)$symbol$version[](bg:#464347 fg:red)]($style)"
+symbol = " "
 style = "bg:red fg:black"
