@@ -1,0 +1,97 @@
+# Don't print a newline
+add_newline = false
+
+[line_break]
+disabled = true
+
+[character]
+disabled = false
+format = "$symbol "
+success_symbol = "[[](bg:green fg:#464347)](fg:green)"
+error_symbol = "[[](bg:red fg:#464347)](fg:red)"
+vicmd_symbol = "[[](bg:#6f6a70 fg:#464347)[](bg:#464347 fg:#6f6a70)](bold bg:#6f6a70 fg:redd)"
+
+[cmd_duration]
+disabled = true
+
+[directory]
+disabled = false
+truncation_length = 3
+truncate_to_repo = true
+fish_style_pwd_dir_length = 0
+use_logical_path = true
+format = "[[ ](bg:#464347)[](bg:blue fg:#464347) $path[](bg:#464347 fg:blue)]($style)([[](bg:red fg:#464347)$read_only[](bg:#464347 fg:red)]($read_only_style))"
+style = "bg:blue fg:#000000"
+read_only = "🔒"
+read_only_style = "bg:red"
+truncation_symbol = "…/"
+
+[golang]
+disabled = false
+format = "[[](bg:cyan fg:#464347)$symbol$version[](bg:#464347 fg:cyan)]($style)"
+symbol = " "
+style = "bg:cyan fg:black"
+
+[git_branch]
+disabled = false
+format = "[[](bg:purple fg:#464347) $symbol$branch[](bg:#464347 fg:purple)]($style)"
+symbol = " "
+style = "bg:purple fg:black"
+# truncation_length = 7 # default = 2^63 - 1
+truncation_symbol = "…"
+
+[git_commit]
+disabled = false
+commit_hash_length = 7
+format = '[[](bg:green fg:#464347)\($hash\)[](bg:#464347 fg:green)]($style)'
+style = "bg:green fg:black"
+only_detached = true
+
+[git_state]
+disabled = false
+rebase = "REBASING"
+merge = "MERGING"
+revert = "REVERTING"
+cherry_pick = "CHERRY-PICKING"
+bisect = "BISECTING"
+am = "AM"
+am_or_rebase = "AM/REBASE"
+style = "bg:yellow fg:black"
+format = '\([[](bg:yellow fg:#464347)$state( $progress_current/$progress_total )[](bg:#464347 fg:yellow)]($style)\)'
+
+[git_status]
+disabled = false
+format = '([[](bg:red fg:#464347)\[$all_status$ahead_behind\][](bg:#464347 fg:red)]($style))'
+style = "bg:red fg:black"
+stashed = '\$'
+ahead = "⇡"
+behind = "⇣"
+diverged = "⇕"
+conflicted = "="
+deleted = "✘"
+renamed = "»"
+modified = "!"
+staged = "+"
+untracked = "?"
+
+[python]
+disabled = false
+pyenv_version_name = false
+pyenv_prefix = "pyenv "
+python_binary = "python"
+# scan_for_pyfiles = true
+format = '[[](bg:yellow fg:#464347)via $symbol$pyenv_prefix$version( \($virtualenv\))[](bg:#464347 fg:yellow)]($style)'
+style = "bg:yellow fg:black"
+symbol = " "
+
+[ruby]
+disabled = false
+format = "[[](bg:red fg:#464347)via $symbol$version[](bg:#464347 fg:red)]($style)"
+symbol = " "
+style = "bg:red fg:black"
+
+[rust]
+disabled = false
+format = "[[](bg:red fg:#464347)via $symbol$version[](bg:#464347 fg:red)]($style)"
+symbol = " "
+style = "bg:red fg:black"
