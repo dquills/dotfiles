@@ -9,7 +9,7 @@ disabled = false
 format = "$symbol "
 success_symbol = "[[](bg:green fg:#464347)](fg:green)"
 error_symbol = "[[](bg:red fg:#464347)](fg:red)"
-vicmd_symbol = "[[](bg:#6f6a70 fg:#464347)[](bg:#464347 fg:#6f6a70)](bold bg:#6f6a70 fg:redd)"
+vicmd_symbol = "[[](bg:#464347 fg:#464347)](fg:#464347)"
 
 [cmd_duration]
 disabled = true
