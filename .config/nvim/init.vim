@@ -1,3 +1,4 @@
+syntax on
 set guicursor=
 set tabstop=4 softtabstop=4
 set shiftwidth=4
@@ -23,6 +24,8 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+" Plug 'tmsvg/pear-tree'
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 colorscheme dracula
