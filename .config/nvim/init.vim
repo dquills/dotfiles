@@ -24,8 +24,13 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-" Plug 'tmsvg/pear-tree'
 Plug 'jiangmiao/auto-pairs'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'numtostr/FTerm.nvim'
+
+" Syntax Highlighting
+Plug 'cespare/vim-toml', { 'branch': 'main' }
 call plug#end()
 
 colorscheme dracula
@@ -41,3 +46,8 @@ let g:go_highlight_extra_types = 1
 " Telescope
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+
+" Fterm
+nnoremap <leader>ft <cmd>lua require('FTerm').toggle()<cr>
+tnoremap <C-t> <Cmd>lua require('FTerm').toggle()<cr>
