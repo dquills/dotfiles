@@ -33,7 +33,12 @@ Plug 'numtostr/FTerm.nvim'
 Plug 'cespare/vim-toml', { 'branch': 'main' }
 call plug#end()
 
+if has('termguicolors')
+  set termguicolors
+endif
+
 colorscheme dracula
+
 
 " Go syntax highlighting
 let g:go_highlight_types = 1
