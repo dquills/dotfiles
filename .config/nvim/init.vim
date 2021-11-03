@@ -28,6 +28,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'numtostr/FTerm.nvim'
+Plug 'terrortylor/nvim-comment'
 
 " Syntax Highlighting
 Plug 'cespare/vim-toml', { 'branch': 'main' }
@@ -56,3 +57,7 @@ nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 " Fterm
 nnoremap <leader>ft <cmd>lua require('FTerm').toggle()<cr>
 tnoremap <C-t> <Cmd>lua require('FTerm').toggle()<cr>
+
+" nvim-comment initialization
+lua require('nvim_comment').setup({line_mapping = "<leader>'", operator_mapping = "''"})
+
