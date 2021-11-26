@@ -1,0 +1,3 @@
+[submodule "dotlink"]
+	path = dotlink
+	url = git@github.com:dquills/dotlink.git
