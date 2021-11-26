@@ -102,3 +102,8 @@ eval "$(starship init zsh)"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vim="nvim"
 bindkey -v # set vim mode
+
+# start tmux automatically unless we are already in tmux / nvim terminal
+if [ "$TMUX" = "" ] && [ "$VIMRUNTIME" = "" ]; then
+    tmux 
+fi

@@ -1,0 +1,9 @@
+backup-existing: true
+make-dirs: true
+overwrite-existing: false
+paths:
+  '.zshrc': '~/.zshrc'
+  '.config/tmux': '~/.config/'
+  '.config/nvim': '~/.config/'
+  '.config/alacritty': '~/.config/'
+  '.config/starship.toml': '~/.config/'
