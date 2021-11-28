@@ -7,3 +7,4 @@ paths:
   '.config/nvim': '~/.config/'
   '.config/alacritty': '~/.config/'
   '.config/starship.toml': '~/.config/'
+  'tmux': '~/.tmux'
