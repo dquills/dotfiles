@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/dquilling/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -102,6 +102,14 @@ eval "$(starship init zsh)"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vim="nvim"
 bindkey -v # set vim mode
+
+# Path stuff goes here
+GOPATH="$HOME/go"
+PATH="$PATH:$GOPATH/bin"
+
+# Exports
+# This one is particularly nasty and breaks gpg signing if it's not done
+export GPG_TTY=$(tty)
 
 # start tmux automatically unless we are already in tmux / nvim terminal
 if [ "$TMUX" = "" ] && [ "$VIMRUNTIME" = "" ]; then
