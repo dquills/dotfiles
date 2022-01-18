@@ -60,7 +60,7 @@ colorscheme dracula
 " let g:go_highlight_extra_types = 1
 
 " gitsigns config
-lua require('gitsigns').setup()
+lua require('gitsigns').setup({ numhl = true })
 nnoremap <leader>hl <cmd>lua require('gitsigns').toggle_current_line_blame()<cr>
 
 " Telescope
@@ -72,7 +72,9 @@ nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>ft <cmd>lua require('telescope.builtin').treesitter()<cr>
 nnoremap <leader>gs <cmd>lua require('telescope.builtin').git_status()<cr>
+nnoremap <leader>fq <cmd>lua require('telescope.builtin').keymaps()<cr>
 
+nnoremap <leader>lr <cmd>lua require('telescope.builtin').lsp_references()<cr>
 
 " nvim-comment initialization
 lua require('nvim_comment').setup({line_mapping = "<leader>'", operator_mapping = "''"})
