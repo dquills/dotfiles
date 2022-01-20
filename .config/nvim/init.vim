@@ -41,6 +41,7 @@ Plug 'lewis6991/gitsigns.nvim'
 Plug 'rlane/pounce.nvim'
 Plug 'neovim/nvim-lspconfig'
 " Syntax Highlighting
+Plug 'norcalli/nvim-colorizer.lua'
 " Plug 'cespare/vim-toml', { 'branch': 'main' }
 call plug#end()
 
@@ -121,3 +122,7 @@ nnoremap <leader>n <cmd>NERDTreeToggle<cr>
 
 " lua files
 lua require('config')
+
+" colorizer setup
+lua require'colorizer'.setup()
+
