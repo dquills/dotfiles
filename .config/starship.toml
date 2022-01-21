@@ -4,6 +4,9 @@ add_newline = false
 [line_break]
 disabled = true
 
+[aws]
+disabled = true
+
 [character]
 disabled = false
 format = "$symbol "
