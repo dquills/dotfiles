@@ -115,3 +115,13 @@ export GPG_TTY=$(tty)
 if [ "$TMUX" = "" ] && [ "$VIMRUNTIME" = "" ]; then
     tmux 
 fi
+
+
+gif() {
+  local gifdir="$TMPDIR/gif"
+  rm -rf $gifdir
+  mkdir -p $gifdir
+
+  ffmpeg -i $1 -r 10 -filter:v "setpts=$2*PTS" $gifdir/frame%04d.png
+  gifski -o output.gif $gifdir/frame*.png
+}
