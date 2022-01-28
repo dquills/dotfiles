@@ -74,6 +74,7 @@ nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>ft <cmd>lua require('telescope.builtin').treesitter()<cr>
 nnoremap <leader>gs <cmd>lua require('telescope.builtin').git_status()<cr>
 nnoremap <leader>fq <cmd>lua require('telescope.builtin').keymaps()<cr>
+nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 
 nnoremap <leader>lr <cmd>lua require('telescope.builtin').lsp_references()<cr>
 
