@@ -127,3 +127,8 @@ lua require('config')
 " colorizer setup
 lua require'colorizer'.setup()
 
+augroup relativenum
+    autocmd!
+    autocmd InsertEnter * :set nornu
+    autocmd InsertLeave * :set rnu
+augroup end

@@ -101,6 +101,7 @@ eval "$(starship init zsh)"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vim="nvim"
+alias python="python3"
 bindkey -v # set vim mode
 
 # Path stuff goes here

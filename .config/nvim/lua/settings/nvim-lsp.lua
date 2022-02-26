@@ -53,3 +53,4 @@ local gopls_config = {
 }
 
 lspconfig.gopls.setup(gopls_config)
+lspconfig.pyright.setup(default_config)
