@@ -15,12 +15,29 @@ set scrolloff=4
 set signcolumn=yes
 set colorcolumn=80
 set splitright
+set splitbelow
 
 let mapleader = " "
 
 " Non-plugin maps
 nnoremap <Tab> <Cmd>bnext<CR>
 nnoremap <S-Tab> <Cmd>bprevious<CR>
+
+" Move a block of text up and down
+xnoremap K :'<,'>move-2<CR>gv=gv
+xnoremap J :'<,'>move'>+<CR>gv=gv
+
+" Better navigation
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+nnoremap <C-Up> <Cmd>resize +2<CR>
+nnoremap <C-Down> <Cmd>resize -2<CR>
+nnoremap <C-Left> <Cmd>vertical resize +2<CR>
+nnoremap <C-Right> <Cmd>vertical resize -2<CR>
+
 
 call plug#begin('~/.vim/plugged/')
 Plug 'dracula/vim',{'as':'dracula'}
@@ -95,7 +112,7 @@ require('toggleterm').setup{
 }
 EOF
 nnoremap <leader>tt <cmd>ToggleTerm size=40 direction=float border=shadow<cr>
-nnoremap <leader>ty <cmd>ToggleTerm size=90 direction=vertical<cr>
+nnoremap <leader>ty <cmd>ToggleTerm size=5 direction=horizontal<cr>
 tnoremap <C-t> <cmd>ToggleTerm<cr>
 tnoremap <C-n> <C-\><C-n>
 
