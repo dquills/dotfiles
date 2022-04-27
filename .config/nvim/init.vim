@@ -16,6 +16,7 @@ set signcolumn=yes
 set colorcolumn=80
 set splitright
 set splitbelow
+set laststatus=3
 
 let mapleader = " "
 
