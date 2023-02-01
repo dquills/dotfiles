@@ -52,5 +52,12 @@ local gopls_config = {
     },
 }
 
+local rust_config = {
+    cmd = { "/Users/damian.quilling/.config/rust-analyzer", "-v" },
+    on_attach = on_attach,
+}
+
+lspconfig.rust_analyzer.setup(rust_config)
+
 lspconfig.gopls.setup(gopls_config)
 lspconfig.pyright.setup(default_config)
