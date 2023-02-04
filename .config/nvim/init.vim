@@ -123,7 +123,7 @@ lua <<EOF
 require('nvim-treesitter.configs').setup {
     -- Can't rely on the following until Alacritty releases a universal binary (next release)
     -- until then just update plugins from iterm...
-    ensure_installed = {"go", "rust", "javascript", "python", "lua"},
+    ensure_installed = {"go", "rust", "javascript", "python", "lua", "vim"},
     highlight = {
         enable = true,
         additional_vim_regex_highlighting = false,
