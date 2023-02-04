@@ -2,6 +2,7 @@
   "LuaSnip": { "branch": "master", "commit": "94f192cf5f0a1931b3035c2d8affdebec460968c" },
   "auto-pairs": { "branch": "master", "commit": "39f06b873a8449af8ff6a3eee716d3da14d63a76" },
   "cmp-nvim-lsp": { "branch": "main", "commit": "59224771f91b86d1de12570b4070fe4ad7cd1eeb" },
+  "cmp-nvim-lsp-signature-help": { "branch": "main", "commit": "3d8912ebeb56e5ae08ef0906e3a54de1c66b92f1" },
   "dracula.nvim": { "branch": "main", "commit": "a0b129d7dea51b317fa8064f13b29f68004839c4" },
   "fidget.nvim": { "branch": "main", "commit": "44585a0c0085765195e6961c15529ba6c5a2a13b" },
   "gitsigns.nvim": { "branch": "main", "commit": "0d4fe37ba5285171f3729da955955205f3fa945b" },

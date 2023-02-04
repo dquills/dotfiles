@@ -32,7 +32,16 @@ end
 
 local servers = {
     clangd = {},
-    gopls = {},
+    gopls = {
+        -- experimentalPostfixCompletions = true,
+        analyses = {
+            unusedparams = true,
+            shadow = true,
+        },
+        staticcheck = true,
+        usePlaceholders = true,
+        completeUnimported = true,
+    },
     -- pyright = {},
     rust_analyzer = {},
 
@@ -40,10 +49,21 @@ local servers = {
         Lua = {
             workspace = { checkThirdParty = false },
             telemetry = { enable = false },
+            completion = {
+                callSnippet = 'Replace',
+            },
         },
     },
 }
 
+local inits = {
+    clangd = {},
+    gopls = {
+        usePlaceholders = true,
+    },
+    rust_analyzer = {},
+    sumneko_lua = {},
+}
 -- Setup neovim lua configuration
 require('neodev').setup()
 
@@ -66,6 +86,7 @@ mason_lspconfig.setup_handlers {
             capabilities = capabilities,
             on_attach = on_attach,
             settings = servers[server_name],
+            init_options = inits[server_name],
         }
     end,
 }
@@ -83,10 +104,10 @@ cmp.setup {
       luasnip.lsp_expand(args.body)
     end,
   },
-  mapping = cmp.mapping.preset.insert {
-    ['<C-d>'] = cmp.mapping.scroll_docs(-4),
-    ['<C-f>'] = cmp.mapping.scroll_docs(4),
-    ['<C-Space>'] = cmp.mapping.complete(),
+  mapping = cmp.mapping.preset.insert({
+    ['<C-d>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
+    ['<C-u>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
+    ['<C-f>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
     ['<CR>'] = cmp.mapping.confirm {
       behavior = cmp.ConfirmBehavior.Replace,
       select = true,
@@ -109,10 +130,11 @@ cmp.setup {
         fallback()
       end
     end, { 'i', 's' }),
-  },
+  }),
   sources = {
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
+    { name = 'nvim_lsp_signature_help' },
   },
 }
 
