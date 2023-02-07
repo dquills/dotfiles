@@ -3,7 +3,7 @@
 -- Normal mode
 -- Set tab / shift+tab to go back and forth in buffers in normal mode
 vim.keymap.set("n", "<Tab>", "<cmd>:bnext<CR>", { desc = 'Next Buffer' })
-vim.keymap.set("n", "<Tab>", "<cmd>:bprev<CR>", { desc = 'Prev Buffer' })
+vim.keymap.set("n", "<S-Tab>", "<cmd>:bprev<CR>", { desc = 'Prev Buffer' })
 
 vim.keymap.set("n", "Q", "<nop>")
 

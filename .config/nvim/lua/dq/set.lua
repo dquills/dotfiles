@@ -1,5 +1,5 @@
 vim.opt.guicursor = ""
-
+vim.opt.hlsearch = false
 -- Line numbers
 vim.opt.nu = true
 vim.opt.relativenumber = true
