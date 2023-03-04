@@ -423,7 +423,7 @@ mode "$mode_gaps_outer" {
 # Personal Settings
 
 bindsym $mod+p exec /opt/google/chrome/chrome
-bindcode 133 --release exec "rofi -show drun"
+bindcode 133 --release exec "rofi -show drun -kb-cancel Super_L"
 
 # make the play/pause button work..
 bindsym XF86AudioPlay exec playerctl play-pause
