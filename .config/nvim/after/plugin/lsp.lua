@@ -42,7 +42,7 @@ local servers = {
         usePlaceholders = true,
         completeUnimported = true,
     },
-    -- pyright = {},
+    pyright = {},
     rust_analyzer = {},
 
     sumneko_lua = {
@@ -61,6 +61,7 @@ local inits = {
     gopls = {
         usePlaceholders = true,
     },
+    pyright = {},
     rust_analyzer = {},
     sumneko_lua = {},
 }
