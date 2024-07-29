@@ -1,4 +1,5 @@
 .DS_Store
+.luarc.json
 
 .config/tmux/plugins
 .config/nvim/autoload

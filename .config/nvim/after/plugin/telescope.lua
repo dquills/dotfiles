@@ -21,3 +21,5 @@ vim.keymap.set('n', '<leader>/', function()
     previewer = false,
   })
 end, { desc = '[/] Fuzzily search in current buffer]' })
+
+vim.keymap.set('n', '<leader>dl', require('telescope.builtin').diagnostics, { desc = "[D]iagnostic [L]ist" })
