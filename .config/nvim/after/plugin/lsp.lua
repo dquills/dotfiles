@@ -6,14 +6,28 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
 
+local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+
 -- LSP Config
-local on_attach = function(_, bufnr)
+local on_attach = function(client, bufnr)
     local nmap = function(keys, func, desc)
         if desc then
         desc = 'LSP: ' .. desc
         end
 
         vim.keymap.set('n', keys, func, { buffer = bufnr, desc = desc })
+    end
+
+    -- Format on save
+    if client.supports_method("textDocument/formatting") then
+        vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+        vim.api.nvim_create_autocmd("BufWritePre", {
+            group = augroup,
+            buffer = bufnr,
+            callback = function()
+                vim.lsp.buf.format()
+            end,
+        })
     end
 
     -- Maps
@@ -45,7 +59,7 @@ local servers = {
     pyright = {},
     rust_analyzer = {},
 
-    sumneko_lua = {
+    lua_ls = {
         Lua = {
             workspace = { checkThirdParty = false },
             telemetry = { enable = false },
@@ -63,7 +77,7 @@ local inits = {
     },
     pyright = {},
     rust_analyzer = {},
-    sumneko_lua = {},
+    lua_ls = {},
 }
 -- Setup neovim lua configuration
 require('neodev').setup()
