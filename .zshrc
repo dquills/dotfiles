@@ -126,3 +126,12 @@ gif() {
   ffmpeg -i $1 -r 10 -filter:v "setpts=$2*PTS" $gifdir/frame%04d.png
   gifski -o output.gif $gifdir/frame*.png
 }
+
+cat() {
+    if type bat; then
+        echo "test"
+        bat "$@"
+    else
+        cat "$@"
+    fi
+}

@@ -1,6 +1,6 @@
 -- Setup
-require('nvim-treesitter.configs').setup{
-    ensure_instaled = { 'go', 'rust', 'javascript', 'python', 'lua', 'vim', 'help', 'elixir', 'ruby', 'c' },
+require('nvim-treesitter.configs').setup {
+    ensure_installed = { 'go', 'rust', 'javascript', 'python', 'lua', 'elixir', 'ruby', 'c' },
     highlight = {
         enable = true,
         additional_vim_regex_highlighting = false,
@@ -65,4 +65,3 @@ require('nvim-treesitter.configs').setup{
     auto_install = true,
     sync_install = false,
 }
-
