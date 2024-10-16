@@ -11,7 +11,7 @@ return {
         "nvim-neo-tree/neo-tree.nvim",
         lazy = false,
         branch = "v2.x",
-        dependencies = { 
+        dependencies = {
             "nvim-lua/plenary.nvim",
             "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
             "MunifTanjim/nui.nvim",
@@ -35,6 +35,20 @@ return {
         dependencies = {
             'nvim-lua/plenary.nvim',
         },
+        config = function()
+            telescope_actions = require("telescope.actions")
+            require("telescope").setup {
+                defaults = {
+                    file_ignore_patterns = { "%.git/", "node_modules/", "coverage/", "__pycache__/", "%.o", "vendor" },
+                    mappings = {
+                        i = {
+                            ['<C-k>'] = telescope_actions.move_selection_previous,
+                            ['<C-j>'] = telescope_actions.move_selection_next
+                        }
+                    }
+                }
+            }
+        end
     },
     {
         'nvim-telescope/telescope-fzf-native.nvim',
