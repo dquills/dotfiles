@@ -36,7 +36,7 @@ return {
             'nvim-lua/plenary.nvim',
         },
         config = function()
-            telescope_actions = require("telescope.actions")
+            local telescope_actions = require("telescope.actions")
             require("telescope").setup {
                 defaults = {
                     file_ignore_patterns = { "%.git/", "node_modules/", "coverage/", "__pycache__/", "%.o", "vendor" },

@@ -1,4 +1,4 @@
-vim.keymap.set("n", "<leader>n", "<cmd>NeoTreeShowToggle<cr>", { desc = "Show [N]eotree" })
+vim.keymap.set("n", "<leader>n", "<cmd>NeoTreeFocus<cr>", { desc = "Show [N]eotree" })
 
 require("neo-tree").setup({
     close_if_last_window = true,
