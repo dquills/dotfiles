@@ -106,8 +106,9 @@ bindkey -v # set vim mode
 
 # Path stuff goes here
 GOPATH="$HOME/go"
-PATH="$PATH:$GOPATH/bin"
+export PATH="$PATH:$GOPATH/bin"
 
+export PATH="$PATH:/Users/dq/.local/bin"
 # Exports
 # This one is particularly nasty and breaks gpg signing if it's not done
 export GPG_TTY=$(tty)
@@ -135,3 +136,4 @@ cat() {
         cat "$@"
     fi
 }
+
